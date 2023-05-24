@@ -11,6 +11,15 @@
 		C248FBD12A1D4390004B6EDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBD02A1D4390004B6EDE /* SceneDelegate.swift */; };
 		C248FBD62A1D4390004B6EDE /* DessertListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248FBD42A1D4390004B6EDE /* DessertListView.storyboard */; };
 		C248FBD82A1D4391004B6EDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C248FBD72A1D4391004B6EDE /* Assets.xcassets */; };
+		C248FBEE2A1D47D9004B6EDE /* DessertListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBED2A1D47D9004B6EDE /* DessertListTableViewCell.swift */; };
+		C248FBF12A1D47FB004B6EDE /* DessertListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBF02A1D47FB004B6EDE /* DessertListTableViewController.swift */; };
+		C248FBF42A1D49FD004B6EDE /* DessertList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBF32A1D49FD004B6EDE /* DessertList.swift */; };
+		C248FBF62A1D4B7F004B6EDE /* DessertListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBF52A1D4B7F004B6EDE /* DessertListViewModel.swift */; };
+		C248FBF82A1D4BC8004B6EDE /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBF72A1D4BC8004B6EDE /* ResultError.swift */; };
+		C248FBFF2A1D4C7F004B6EDE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBFE2A1D4C7F004B6EDE /* APIService.swift */; };
+		C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC002A1E7AEF004B6EDE /* DessertListService.swift */; };
+		C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */; };
+		C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC042A1E86E6004B6EDE /* ImageViewService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		C248FBD52A1D4390004B6EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DessertListView.storyboard; sourceTree = "<group>"; };
 		C248FBD72A1D4391004B6EDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C248FBDC2A1D4391004B6EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C248FBED2A1D47D9004B6EDE /* DessertListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListTableViewCell.swift; sourceTree = "<group>"; };
+		C248FBF02A1D47FB004B6EDE /* DessertListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListTableViewController.swift; sourceTree = "<group>"; };
+		C248FBF32A1D49FD004B6EDE /* DessertList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertList.swift; sourceTree = "<group>"; };
+		C248FBF52A1D4B7F004B6EDE /* DessertListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListViewModel.swift; sourceTree = "<group>"; };
+		C248FBF72A1D4BC8004B6EDE /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
+		C248FBFE2A1D4C7F004B6EDE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		C248FC002A1E7AEF004B6EDE /* DessertListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListService.swift; sourceTree = "<group>"; };
+		C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		C248FC042A1E86E6004B6EDE /* ImageViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +70,8 @@
 		C248FBCD2A1D4390004B6EDE /* MealDB */ = {
 			isa = PBXGroup;
 			children = (
-				C248FBE32A1D45A5004B6EDE /* DessertListView */,
-				C248FBE42A1D45DE004B6EDE /* DessertDetailView */,
+				C248FBF92A1D4BF7004B6EDE /* Networking */,
+				C248FBFD2A1D4C53004B6EDE /* Main */,
 				C248FBE22A1D4443004B6EDE /* Resources */,
 			);
 			path = MealDB;
@@ -73,8 +91,9 @@
 		C248FBE32A1D45A5004B6EDE /* DessertListView */ = {
 			isa = PBXGroup;
 			children = (
-				C248FBE62A1D45FC004B6EDE /* View */,
+				C248FBFA2A1D4C0B004B6EDE /* NetworkService */,
 				C248FBE72A1D4609004B6EDE /* Model */,
+				C248FBF22A1D49DA004B6EDE /* View */,
 				C248FBE82A1D4618004B6EDE /* ViewModel */,
 			);
 			path = DessertListView;
@@ -83,24 +102,18 @@
 		C248FBE42A1D45DE004B6EDE /* DessertDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				C248FBEC2A1D4640004B6EDE /* View */,
+				C248FBFC2A1D4C3A004B6EDE /* NetworkService */,
+				C248FBEC2A1D4640004B6EDE /* View Controller */,
 				C248FBEB2A1D4636004B6EDE /* Model */,
 				C248FBE92A1D4625004B6EDE /* ViewModel */,
 			);
 			path = DessertDetailView;
 			sourceTree = "<group>";
 		};
-		C248FBE62A1D45FC004B6EDE /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C248FBD42A1D4390004B6EDE /* DessertListView.storyboard */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		C248FBE72A1D4609004B6EDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C248FBF32A1D49FD004B6EDE /* DessertList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +121,7 @@
 		C248FBE82A1D4618004B6EDE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C248FBF52A1D4B7F004B6EDE /* DessertListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -126,11 +140,72 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C248FBEC2A1D4640004B6EDE /* View */ = {
+		C248FBEC2A1D4640004B6EDE /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C248FBFB2A1D4C30004B6EDE /* View */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		C248FBEF2A1D47DD004B6EDE /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				C248FBED2A1D47D9004B6EDE /* DessertListTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		C248FBF22A1D49DA004B6EDE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C248FBD42A1D4390004B6EDE /* DessertListView.storyboard */,
+				C248FBF02A1D47FB004B6EDE /* DessertListTableViewController.swift */,
+				C248FBEF2A1D47DD004B6EDE /* CustomCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C248FBF92A1D4BF7004B6EDE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C248FBF72A1D4BC8004B6EDE /* ResultError.swift */,
+				C248FBFE2A1D4C7F004B6EDE /* APIService.swift */,
+				C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */,
+				C248FC042A1E86E6004B6EDE /* ImageViewService.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		C248FBFA2A1D4C0B004B6EDE /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				C248FC002A1E7AEF004B6EDE /* DessertListService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		C248FBFB2A1D4C30004B6EDE /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C248FBFC2A1D4C3A004B6EDE /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		C248FBFD2A1D4C53004B6EDE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C248FBE32A1D45A5004B6EDE /* DessertListView */,
+				C248FBE42A1D45DE004B6EDE /* DessertDetailView */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +278,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C248FBF12A1D47FB004B6EDE /* DessertListTableViewController.swift in Sources */,
+				C248FBF62A1D4B7F004B6EDE /* DessertListViewModel.swift in Sources */,
 				C248FBCF2A1D4390004B6EDE /* AppDelegate.swift in Sources */,
+				C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */,
+				C248FBF82A1D4BC8004B6EDE /* ResultError.swift in Sources */,
 				C248FBD12A1D4390004B6EDE /* SceneDelegate.swift in Sources */,
+				C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */,
+				C248FBF42A1D49FD004B6EDE /* DessertList.swift in Sources */,
+				C248FBFF2A1D4C7F004B6EDE /* APIService.swift in Sources */,
+				C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */,
+				C248FBEE2A1D47D9004B6EDE /* DessertListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
