@@ -7,22 +7,22 @@
 
 import Foundation
 
-struct DessertMeals: Decodable {
+struct DessertList: Decodable {
     
     enum CodingKeys: String, CodingKey {
-        case recipes = "meals"
+        case recipeList = "meals"
     }
     
-    let recipes: [Recipe]
+    let recipeList: [Recipe]
 }
 
 struct Recipe: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case name = "strMeal"
-        case id   = "idMeal"
+        case id = "idMeal"
     }
     
     let name: String
-    let id  : String
+    let id: String
 }
