@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Dessert-->
+        <!--Desserts-->
         <scene sceneID="WsI-eF-iaS">
             <objects>
                 <tableViewController storyboardIdentifier="listView" id="U77-mJ-ZG8" customClass="DessertListTableViewController" customModule="MealDB" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,9 +30,9 @@
                                                 <constraint firstAttribute="width" constant="50" id="Lxp-uV-MCU"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-bH-JWy">
-                                            <rect key="frame" x="78" y="16" width="295" height="24"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dessert" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCQ-bH-JWy">
+                                            <rect key="frame" x="78" y="16" width="295" height="48"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -44,7 +44,7 @@
                                         <constraint firstItem="tCQ-bH-JWy" firstAttribute="top" secondItem="RpC-xa-BK1" secondAttribute="topMargin" constant="5" id="ifs-26-azG"/>
                                         <constraint firstItem="tCQ-bH-JWy" firstAttribute="leading" secondItem="F5z-Ix-IGp" secondAttribute="trailing" constant="8" id="k2c-aN-d5a"/>
                                         <constraint firstItem="F5z-Ix-IGp" firstAttribute="leading" secondItem="RpC-xa-BK1" secondAttribute="leadingMargin" id="kH7-Ja-Bhr"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="tCQ-bH-JWy" secondAttribute="bottom" constant="32" id="lUo-er-grP"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="tCQ-bH-JWy" secondAttribute="bottom" constant="8" id="lUo-er-grP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -58,7 +58,7 @@
                             <outlet property="delegate" destination="U77-mJ-ZG8" id="UJB-is-BHx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Dessert" id="AAh-dL-YR1"/>
+                    <navigationItem key="navigationItem" title="Desserts" id="AAh-dL-YR1"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0g-1Q-CM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

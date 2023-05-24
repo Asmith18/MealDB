@@ -15,6 +15,8 @@ class DessertListTableViewCell: UITableViewCell {
     func updateViews(recipe: Recipe) {
         dessertNameLabel.text = recipe.name
         fetchImage(recipe: recipe)
+        dessertImageView.layer.cornerRadius = dessertImageView.frame.width / 2
+        dessertImageView.clipsToBounds = true
     }
     
     func fetchImage(recipe: Recipe) {
