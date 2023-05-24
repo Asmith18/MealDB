@@ -15,7 +15,7 @@ class DessertListTableViewController: UITableViewController, DessertListViewMode
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = DessertListViewModel(delegate: self)
-        viewModel.fetch()
+        viewModel.fetchDessertList()
     }
     
     func dessertListHasData() {

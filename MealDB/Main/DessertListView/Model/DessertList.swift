@@ -21,8 +21,10 @@ struct Recipe: Decodable {
     enum CodingKeys: String, CodingKey {
         case name = "strMeal"
         case id = "idMeal"
+        case imageView = "strMealThumb"
     }
     
-    let name: String
-    let id: String
+    let name: String?
+    let id: String?
+    let imageView: String?
 }

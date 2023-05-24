@@ -22,7 +22,7 @@ class DessertListViewModel {
         self.delegate = delegate
     }
     
-    func fetch() {
+    func fetchDessertList() {
         service.fetchDessertList(from: .filterDessert) { [weak self] result in
             switch result {
             case .failure(let error):
@@ -32,5 +32,9 @@ class DessertListViewModel {
                 self?.delegate?.dessertListHasData()
             }
         }
+    }
+    
+    func fetchDessertImage() {
+        
     }
 }

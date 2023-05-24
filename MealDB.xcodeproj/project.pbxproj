@@ -19,6 +19,7 @@
 		C248FBFF2A1D4C7F004B6EDE /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FBFE2A1D4C7F004B6EDE /* APIService.swift */; };
 		C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC002A1E7AEF004B6EDE /* DessertListService.swift */; };
 		C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */; };
+		C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC042A1E86E6004B6EDE /* ImageViewService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C248FBFE2A1D4C7F004B6EDE /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		C248FC002A1E7AEF004B6EDE /* DessertListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListService.swift; sourceTree = "<group>"; };
 		C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		C248FC042A1E86E6004B6EDE /* ImageViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 				C248FBF72A1D4BC8004B6EDE /* ResultError.swift */,
 				C248FBFE2A1D4C7F004B6EDE /* APIService.swift */,
 				C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */,
+				C248FC042A1E86E6004B6EDE /* ImageViewService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 				C248FBF12A1D47FB004B6EDE /* DessertListTableViewController.swift in Sources */,
 				C248FBF62A1D4B7F004B6EDE /* DessertListViewModel.swift in Sources */,
 				C248FBCF2A1D4390004B6EDE /* AppDelegate.swift in Sources */,
+				C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */,
 				C248FBF82A1D4BC8004B6EDE /* ResultError.swift in Sources */,
 				C248FBD12A1D4390004B6EDE /* SceneDelegate.swift in Sources */,
 				C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */,
