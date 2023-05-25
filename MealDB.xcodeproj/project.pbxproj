@@ -22,6 +22,7 @@
 		C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC042A1E86E6004B6EDE /* ImageViewService.swift */; };
 		C248FC072A1FC2D2004B6EDE /* DessertDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */; };
 		C248FC092A1FC3AC004B6EDE /* DessertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */; };
+		C248FC0B2A1FCC4B004B6EDE /* DessertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC0A2A1FCC4B004B6EDE /* DessertDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		C248FC042A1E86E6004B6EDE /* ImageViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewService.swift; sourceTree = "<group>"; };
 		C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DessertDetail.storyboard; sourceTree = "<group>"; };
 		C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailViewController.swift; sourceTree = "<group>"; };
+		C248FC0A2A1FCC4B004B6EDE /* DessertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		C248FBEB2A1D4636004B6EDE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C248FC0A2A1FCC4B004B6EDE /* DessertDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */,
 				C248FC092A1FC3AC004B6EDE /* DessertDetailViewController.swift in Sources */,
 				C248FBF42A1D49FD004B6EDE /* DessertList.swift in Sources */,
+				C248FC0B2A1FCC4B004B6EDE /* DessertDetails.swift in Sources */,
 				C248FBFF2A1D4C7F004B6EDE /* APIService.swift in Sources */,
 				C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */,
 				C248FBEE2A1D47D9004B6EDE /* DessertListTableViewCell.swift in Sources */,
