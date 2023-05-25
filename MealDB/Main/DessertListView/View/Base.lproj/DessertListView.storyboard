@@ -50,6 +50,7 @@
                                 <connections>
                                     <outlet property="dessertImageView" destination="F5z-Ix-IGp" id="Km7-Ur-H0O"/>
                                     <outlet property="dessertNameLabel" destination="tCQ-bH-JWy" id="jQO-Y7-59O"/>
+                                    <segue destination="dJE-Cb-8FK" kind="show" id="G3d-Du-Ne8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,6 +64,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0g-1Q-CM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1263.3587786259541" y="-33.098591549295776"/>
+        </scene>
+        <!--DessertRecipeDetail-->
+        <scene sceneID="Fba-HI-Aaw">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="dessertDetail" storyboardName="DessertRecipeDetail" id="dJE-Cb-8FK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="rgc-c3-Ywx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMq-SK-lVG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="-33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CTJ-Zu-tZx">

@@ -20,6 +20,8 @@
 		C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC002A1E7AEF004B6EDE /* DessertListService.swift */; };
 		C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */; };
 		C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC042A1E86E6004B6EDE /* ImageViewService.swift */; };
+		C248FC072A1FC2D2004B6EDE /* DessertDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */; };
+		C248FC092A1FC3AC004B6EDE /* DessertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		C248FC002A1E7AEF004B6EDE /* DessertListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertListService.swift; sourceTree = "<group>"; };
 		C248FC022A1E7C4F004B6EDE /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
 		C248FC042A1E86E6004B6EDE /* ImageViewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewService.swift; sourceTree = "<group>"; };
+		C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DessertDetail.storyboard; sourceTree = "<group>"; };
+		C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				C248FBFC2A1D4C3A004B6EDE /* NetworkService */,
-				C248FBEC2A1D4640004B6EDE /* View Controller */,
+				C248FBFB2A1D4C30004B6EDE /* View */,
 				C248FBEB2A1D4636004B6EDE /* Model */,
 				C248FBE92A1D4625004B6EDE /* ViewModel */,
 			);
@@ -138,14 +142,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		C248FBEC2A1D4640004B6EDE /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C248FBFB2A1D4C30004B6EDE /* View */,
-			);
-			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		C248FBEF2A1D47DD004B6EDE /* CustomCell */ = {
@@ -188,6 +184,8 @@
 		C248FBFB2A1D4C30004B6EDE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */,
+				C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C248FC072A1FC2D2004B6EDE /* DessertDetail.storyboard in Resources */,
 				C248FBD82A1D4391004B6EDE /* Assets.xcassets in Resources */,
 				C248FBD62A1D4390004B6EDE /* DessertListView.storyboard in Resources */,
 			);
@@ -285,6 +284,7 @@
 				C248FBF82A1D4BC8004B6EDE /* ResultError.swift in Sources */,
 				C248FBD12A1D4390004B6EDE /* SceneDelegate.swift in Sources */,
 				C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */,
+				C248FC092A1FC3AC004B6EDE /* DessertDetailViewController.swift in Sources */,
 				C248FBF42A1D49FD004B6EDE /* DessertList.swift in Sources */,
 				C248FBFF2A1D4C7F004B6EDE /* APIService.swift in Sources */,
 				C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */,
