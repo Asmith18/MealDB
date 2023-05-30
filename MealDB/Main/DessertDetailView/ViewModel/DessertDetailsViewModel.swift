@@ -23,16 +23,29 @@ class DessertDetailsViewModel {
         self.delegate = delegate
     }
     
-    func fetchdessertDetails() {
-        guard let id = recipe?.id else { return }
-        service.fetchDessertDetails(from: .dessertById(id)) { [weak self] result in
-            switch result {
-            case .success(let dessert):
-                self?.recipeDetails = dessert.recipe[0]
-                self?.delegate?.dessertDetailHasData()
-            case .failure(let error):
-                print(error.errorDescription)
+    func fetchDessertDetails(completion: @escaping (RecipeDetails, URL?) -> Void) {
+            guard let id = recipe?.id else { return }
+            
+            service.fetchDessertDetails(from: .dessertById(id)) { [weak self] result in
+                switch result {
+                case .success(let dessert):
+                    self?.recipeDetails = dessert.recipe[0]
+                    self?.updateViews(completion: completion)
+                    self?.delegate?.dessertDetailHasData()
+                case .failure(let error):
+                    print(error)
+                }
             }
         }
-    }
+        
+        private func updateViews(completion: @escaping (RecipeDetails, URL?) -> Void) {
+            guard let recipeDetails = recipeDetails else { return }
+            
+            guard let image = recipeDetails.recpieImage, let url = URL(string: image) else {
+                completion(recipeDetails, nil)
+                return
+            }
+            
+            completion(recipeDetails, url)
+        }
 }

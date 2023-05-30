@@ -22,23 +22,15 @@ class DessertDetailViewController: UIViewController, UITableViewDelegate, UITabl
         navigationController?.navigationBar.prefersLargeTitles = false
         dessertIngredientsTableView.dataSource = self
         dessertIngredientsTableView.delegate = self
-        viewModel.fetchdessertDetails()
-        updateViews()
-    }
-    
-    func updateViews() {
-        guard let recipeDetails = viewModel.recipeDetails else { return }
-        fetchImage(recipeDetails: recipeDetails)
-        dessertInstructions.text = recipeDetails.recipeInstructions
-        dessertNameLabel.text = recipeDetails.recipeName
-    }
-    
-    func fetchImage(recipeDetails: RecipeDetails) {
-        guard let image = recipeDetails.recpieImage,
-              let url = URL(string: image) else {
-            return
+        viewModel.fetchDessertDetails { [weak self] recipeDetails, imageURL in
+            DispatchQueue.main.async {
+                self?.dessertInstructions.text = recipeDetails.recipeInstructions
+                self?.dessertNameLabel.text = recipeDetails.recipeName
+                if let url = imageURL {
+                    self?.dessertImageView.fetchImage(using: url)
+                }
+            }
         }
-        DispatchQueue.main.async { self.dessertImageView.fetchImage(using: url) }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +38,7 @@ class DessertDetailViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = dessertIngredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
+        let cell = dessertIngredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
         
         guard let ingredient = viewModel.recipeDetails?.ingredients[indexPath.row] else { return UITableViewCell()}
         var config = cell.defaultContentConfiguration()
@@ -62,7 +54,6 @@ extension DessertDetailViewController: DessertDetailsViewModelDelegate {
     func dessertDetailHasData() {
         DispatchQueue.main.async {
             self.dessertIngredientsTableView.reloadData()
-            self.updateViews()
         }
     }
 }
