@@ -10,20 +10,59 @@ import UIKit
 class DessertDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-    @IBOutlet weak var dessertImageView: UIImageView!
+    @IBOutlet weak var dessertImageView: ImageViewService!
     @IBOutlet weak var dessertIngredientsTableView: UITableView!
     @IBOutlet weak var dessertInstructions: UITextView!
+    @IBOutlet weak var dessertNameLabel: UILabel!
+    
+    var viewModel: DessertDetailsViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.prefersLargeTitles = false
+        dessertIngredientsTableView.dataSource = self
+        dessertIngredientsTableView.delegate = self
+        viewModel.fetchdessertDetails()
+        updateViews()
+    }
+    
+    func updateViews() {
+        guard let recipeDetails = viewModel.recipeDetails else { return }
+        fetchImage(recipeDetails: recipeDetails)
+        dessertInstructions.text = recipeDetails.recipeInstructions
+        dessertNameLabel.text = recipeDetails.recipeName
+    }
+    
+    func fetchImage(recipeDetails: RecipeDetails) {
+        guard let image = recipeDetails.recpieImage,
+              let url = URL(string: image) else {
+            return
+        }
+        DispatchQueue.main.async { self.dessertImageView.fetchImage(using: url) }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return viewModel.recipeDetails?.ingredients.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+       let cell = dessertIngredientsTableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath)
+        
+        guard let ingredient = viewModel.recipeDetails?.ingredients[indexPath.row] else { return UITableViewCell()}
+        var config = cell.defaultContentConfiguration()
+        config.text = ingredient.name
+        config.secondaryText = ingredient.mesurement
+        cell.contentConfiguration = config
+        
+        return cell
+    }
+}
+
+extension DessertDetailViewController: DessertDetailsViewModelDelegate {
+    func dessertDetailHasData() {
+        DispatchQueue.main.async {
+            self.dessertIngredientsTableView.reloadData()
+            self.updateViews()
+        }
     }
 }

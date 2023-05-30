@@ -23,6 +23,8 @@
 		C248FC072A1FC2D2004B6EDE /* DessertDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */; };
 		C248FC092A1FC3AC004B6EDE /* DessertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */; };
 		C248FC0B2A1FCC4B004B6EDE /* DessertDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = C248FC0A2A1FCC4B004B6EDE /* DessertDetails.swift */; };
+		C2C50D792A26621C003A4E10 /* DessertDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C50D782A26621C003A4E10 /* DessertDetailsViewModel.swift */; };
+		C2C50D7B2A266A22003A4E10 /* DessertDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C50D7A2A266A22003A4E10 /* DessertDetailService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		C248FC062A1FC2D2004B6EDE /* DessertDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DessertDetail.storyboard; sourceTree = "<group>"; };
 		C248FC082A1FC3AC004B6EDE /* DessertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailViewController.swift; sourceTree = "<group>"; };
 		C248FC0A2A1FCC4B004B6EDE /* DessertDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetails.swift; sourceTree = "<group>"; };
+		C2C50D782A26621C003A4E10 /* DessertDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailsViewModel.swift; sourceTree = "<group>"; };
+		C2C50D7A2A266A22003A4E10 /* DessertDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertDetailService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		C248FBE92A1D4625004B6EDE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C2C50D782A26621C003A4E10 /* DessertDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 		C248FBFC2A1D4C3A004B6EDE /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				C2C50D7A2A266A22003A4E10 /* DessertDetailService.swift */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				C248FBF62A1D4B7F004B6EDE /* DessertListViewModel.swift in Sources */,
 				C248FBCF2A1D4390004B6EDE /* AppDelegate.swift in Sources */,
 				C248FC052A1E86E6004B6EDE /* ImageViewService.swift in Sources */,
+				C2C50D792A26621C003A4E10 /* DessertDetailsViewModel.swift in Sources */,
 				C248FBF82A1D4BC8004B6EDE /* ResultError.swift in Sources */,
 				C248FBD12A1D4390004B6EDE /* SceneDelegate.swift in Sources */,
 				C248FC032A1E7C4F004B6EDE /* ApiEndpoints.swift in Sources */,
@@ -293,6 +300,7 @@
 				C248FBFF2A1D4C7F004B6EDE /* APIService.swift in Sources */,
 				C248FC012A1E7AEF004B6EDE /* DessertListService.swift in Sources */,
 				C248FBEE2A1D47D9004B6EDE /* DessertListTableViewCell.swift in Sources */,
+				C2C50D7B2A266A22003A4E10 /* DessertDetailService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

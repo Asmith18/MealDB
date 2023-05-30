@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DessertDetails: Decodable {
+struct Dessert: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case recipe = "meals"
@@ -48,7 +48,16 @@ extension RecipeDetails {
         let ingredientNamesContainer = try? decoder.container(keyedBy: IngredientCodingKeys.self)
         let measurementsContainer = try? decoder.container(keyedBy: MeasurementsCodingKeys.self)
 
-//        let ingredients: [Ingredient] = IngredientCodingKeys.allCases.enumerated().compactMap()
+        let ingredients: [Ingredient] = IngredientCodingKeys.allCases.enumerated().compactMap {
+            guard let name = try? ingredientNamesContainer?.decode(String.self, forKey: $0.element),
+                  let measurement = try? measurementsContainer?.decode(String.self, forKey: MeasurementsCodingKeys.allCases[$0.offset]),
+                  !name.isEmpty,
+                  !measurement.isEmpty
+            else { return nil }
+            
+            return Ingredient(name: name, mesurement: measurement)
+        }
+        self.ingredients = ingredients
     }
     
     private enum IngredientCodingKeys: String, CodingKey, CaseIterable {

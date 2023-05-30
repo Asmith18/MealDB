@@ -13,8 +13,7 @@ protocol DessertListViewModelDelegate: DessertListTableViewController {
 
 class DessertListViewModel {
     
-    var desserts: [Recipe] = []
-    var recipe: Recipe?
+    var recipeList: [Recipe] = []
     weak var delegate: DessertListViewModelDelegate?
     private let service = DessertListService()
     
@@ -28,13 +27,9 @@ class DessertListViewModel {
             case .failure(let error):
                 print(error)
             case .success(let desserts):
-                self?.desserts = desserts.recipeList
+                self?.recipeList = desserts.recipeList
                 self?.delegate?.dessertListHasData()
             }
         }
-    }
-    
-    func fetchDessertImage() {
-        
     }
 }
