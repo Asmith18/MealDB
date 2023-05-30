@@ -13,8 +13,8 @@ class DessertListTableViewCell: UITableViewCell {
     @IBOutlet weak var dessertImageView: ImageViewService!
     
     func updateViews(recipe: Recipe) {
-        dessertNameLabel.text = recipe.name
         fetchImage(recipe: recipe)
+        dessertNameLabel.text = recipe.name
         dessertImageView.layer.cornerRadius = dessertImageView.frame.width / 2
         dessertImageView.clipsToBounds = true
     }
@@ -24,6 +24,6 @@ class DessertListTableViewCell: UITableViewCell {
               let url = URL(string: image) else {
             return
         }
-        dessertImageView.fetchImage(using: url)
+        DispatchQueue.main.async { self.dessertImageView.fetchImage(using: url) }
     }
 }
